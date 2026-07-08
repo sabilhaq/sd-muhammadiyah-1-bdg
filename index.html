@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SD Muhammadiyah 1 Bandung — Arsip Prestasi &amp; Informasi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green-deep:#0B5D3B;
+    --green-dark:#073825;
+    --green-black:#041F15;
+    --gold:#D9A441;
+    --gold-light:#F0C878;
+    --cream:#FAF7F0;
+    --ink:#17211C;
+    --sage:#E8F0E9;
+    --line: rgba(11,93,59,0.16);
+    --red-tag:#B4482F;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Plus Jakarta Sans', sans-serif; color:var(--ink); background:var(--cream); -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+  a{color:inherit; text-decoration:none;}
+  ul{list-style:none;}
+  img{max-width:100%; display:block;}
+  button{font-family:inherit; cursor:pointer;}
+  .eyebrow{font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; font-weight:500;}
+  h1,h2,h3{font-family:'Fraunces', serif; font-weight:600; line-height:1.08;}
+  .italic{font-style:italic; font-weight:400;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+  .sun-mark{display:inline-block; flex-shrink:0;}
+
+  /* Topbar */
+  .topbar{background:var(--green-black); color:var(--sage); font-size:13px;}
+  .topbar .wrap{display:flex; align-items:center; justify-content:space-between; padding:8px 32px;}
+  .topbar .phone{display:flex; align-items:center; gap:8px; font-weight:500;}
+  .topbar .socials{display:flex; gap:14px;}
+  .topbar .socials a{width:26px; height:26px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.08); transition:background .2s;}
+  .topbar .socials a:hover{background:var(--gold);}
+
+  /* Nav */
+  header.nav{background:var(--cream); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:50;}
+  .nav .wrap{display:flex; align-items:center; justify-content:space-between; padding:14px 32px;}
+  .brand{display:flex; align-items:center; gap:14px;}
+  .brand .emblem{width:52px; height:52px; color:var(--green-deep);}
+  .brand .school-name{font-family:'Fraunces', serif; font-weight:600; font-size:15.5px; color:var(--green-deep);}
+  .brand .school-sub{font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.06em; color:var(--ink); font-weight:500;}
+  nav.menu ul{display:flex; align-items:center; gap:30px;}
+  nav.menu a.top-link{font-size:14.5px; font-weight:600; color:var(--ink); position:relative; padding:6px 0;}
+  nav.menu a.top-link.active{color:var(--green-deep);}
+  nav.menu a.top-link::after{content:''; position:absolute; left:0; bottom:-2px; width:0; height:2px; background:var(--gold); transition:width .25s;}
+  nav.menu a.top-link:hover::after{width:100%;}
+
+  /* Hero */
+  .hero{position:relative; background:linear-gradient(120deg, var(--green-deep) 0%, var(--green-dark) 62%, var(--green-black) 100%); color:#fff; overflow:hidden;}
+  .hero-sun{position:absolute; inset:0; opacity:0.13; pointer-events:none; color:var(--gold-light);}
+  .hero .wrap{position:relative; z-index:2; display:grid; grid-template-columns:1.1fr 0.9fr; gap:40px; align-items:center; padding:80px 32px;}
+  .hero-eyebrow{color:var(--gold-light); display:flex; align-items:center; gap:10px; margin-bottom:20px;}
+  .hero-eyebrow .rule{width:34px; height:1px; background:var(--gold-light);}
+  .hero h1{font-size:46px; letter-spacing:-0.01em; margin-bottom:18px;}
+  .hero p.lede{font-size:16px; line-height:1.65; color:rgba(255,255,255,0.82); max-width:460px; margin-bottom:30px;}
+  .cta-row{display:flex; gap:14px; flex-wrap:wrap;}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:13px 24px; border-radius:3px; font-weight:600; font-size:14.5px; border:none; transition:transform .2s, box-shadow .2s;}
+  .btn-gold{background:var(--gold); color:var(--green-black);}
+  .btn-gold:hover{transform:translateY(-2px); box-shadow:0 10px 24px rgba(217,164,65,0.35);}
+  .btn-outline{border:1.5px solid rgba(255,255,255,0.4); color:#fff; background:transparent;}
+  .btn-outline:hover{border-color:#fff; transform:translateY(-2px);}
+  .hero-stat-panel{background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.16); border-radius:8px; padding:28px;}
+  .hero-stat-panel .row{display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.1);}
+  .hero-stat-panel .row:last-child{border-bottom:none;}
+  .hero-stat-panel .row b{font-family:'Fraunces',serif; font-size:26px; color:var(--gold-light);}
+  .hero-stat-panel .row span{font-size:13px; color:rgba(255,255,255,0.75);}
+
+  section{padding:88px 0;}
+  .section-head{max-width:640px; margin-bottom:44px;}
+  .section-head .eyebrow{color:var(--green-deep); display:flex; align-items:center; gap:10px; margin-bottom:14px;}
+  .section-head .eyebrow .rule{width:28px; height:1px; background:var(--gold);}
+  .section-head h2{font-size:32px; color:var(--green-black);}
+  .section-head p{margin-top:14px; color:#3d4a44; line-height:1.7; font-size:15px;}
+  .section-head.on-dark h2{color:#fff;}
+  .section-head.on-dark .eyebrow{color:var(--gold-light);}
+  .section-head.on-dark p{color:rgba(255,255,255,0.72);}
+
+  /* About */
+  .about{background:var(--cream);}
+  .about-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px; align-items:start;}
+  .about-visual{position:relative; background:var(--green-deep); border-radius:6px; aspect-ratio:4/5; overflow:hidden; display:flex; align-items:center; justify-content:center;}
+  .about-visual .center-sun{color:var(--gold-light); width:44%;}
+  .about-list{margin-top:24px; display:flex; flex-direction:column; gap:18px;}
+  .about-item{display:flex; gap:14px;}
+  .about-item .sun-mark{color:var(--gold); width:20px; height:20px; margin-top:3px;}
+  .about-item h4{font-family:'Fraunces', serif; font-weight:600; font-size:16.5px; margin-bottom:4px; color:var(--green-black);}
+  .about-item p{font-size:14px; color:#4a5851; line-height:1.6;}
+
+  /* Archive controls */
+  .archive{background:var(--sage);}
+  .archive-toolbar{display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between; margin-bottom:30px;}
+  .filter-group{display:flex; flex-wrap:wrap; gap:8px;}
+  .chip{border:1px solid var(--line); background:var(--cream); color:var(--ink); padding:8px 16px; border-radius:20px; font-size:13px; font-weight:600; transition:all .18s;}
+  .chip.active, .chip:hover{background:var(--green-deep); color:#fff; border-color:var(--green-deep);}
+  .search-box{position:relative; min-width:240px;}
+  .search-box input{width:100%; padding:10px 14px 10px 36px; border:1px solid var(--line); border-radius:20px; font-size:13.5px; background:var(--cream); font-family:inherit;}
+  .search-box input:focus{outline:2px solid var(--green-deep); outline-offset:1px;}
+  .search-box svg{position:absolute; left:12px; top:50%; transform:translateY(-50%); width:15px; height:15px; color:#6b7a72;}
+  .archive-meta{font-size:12.5px; color:#5a6960; margin-bottom:18px; font-family:'JetBrains Mono', monospace;}
+
+  .prestasi-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  .prestasi-card{background:var(--cream); border:1px solid var(--line); border-radius:6px; padding:24px; position:relative; transition:transform .2s, box-shadow .2s;}
+  .prestasi-card:hover{transform:translateY(-4px); box-shadow:0 16px 30px rgba(7,56,37,0.1);}
+  .prestasi-top{display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px;}
+  .tingkat-tag{font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; padding:4px 9px; border-radius:3px; font-weight:600;}
+  .tingkat-nasional{background:rgba(180,72,47,0.12); color:var(--red-tag);}
+  .tingkat-provinsi{background:rgba(217,164,65,0.16); color:#8a6318;}
+  .tingkat-kota{background:rgba(11,93,59,0.12); color:var(--green-deep);}
+  .tahun-badge{font-family:'Fraunces', serif; font-weight:600; font-size:15px; color:var(--green-deep);}
+  .prestasi-card h4{font-size:16.5px; color:var(--green-black); margin-bottom:8px; line-height:1.3;}
+  .prestasi-card .meta{font-size:13px; color:#5a6960; display:flex; flex-direction:column; gap:3px;}
+  .prestasi-card .kategori-tag{display:inline-block; margin-top:12px; font-size:11.5px; font-weight:600; color:var(--green-deep); border-top:1px solid var(--line); padding-top:10px; width:100%;}
+  .empty-state{text-align:center; padding:50px 20px; color:#5a6960; font-size:14px; grid-column:1/-1;}
+
+  /* Jurnalis Cilik */
+  .jurnalis{background:var(--cream);}
+  .jurnalis-intro{display:flex; gap:14px; align-items:center; background:var(--sage); border:1px solid var(--line); border-radius:6px; padding:18px 22px; margin-bottom:34px;}
+  .jurnalis-intro .sun-mark{width:26px; height:26px; color:var(--gold); flex-shrink:0;}
+  .jurnalis-intro p{font-size:13.5px; color:#3d4a44; line-height:1.6;}
+  .jurnalis-intro strong{color:var(--green-deep);}
+  .jurnalis-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  .jurnalis-card{background:var(--sage); border:1px solid var(--line); border-radius:6px; padding:24px; display:flex; flex-direction:column;}
+  .jurnalis-top{display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px;}
+  .rubrik-tag{font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; padding:4px 9px; border-radius:3px; font-weight:600; background:rgba(217,164,65,0.16); color:#8a6318;}
+  .jurnalis-date{font-size:11.5px; color:#5a6960; font-family:'JetBrains Mono', monospace;}
+  .jurnalis-card h4{font-size:16.5px; color:var(--green-black); margin-bottom:8px; line-height:1.3;}
+  .jurnalis-card .excerpt{font-size:13.5px; color:#4a5851; line-height:1.6; flex:1;}
+  .jurnalis-card .full-text{font-size:13.5px; color:#4a5851; line-height:1.7; display:none; margin-top:10px; border-top:1px solid var(--line); padding-top:12px;}
+  .jurnalis-card.open .full-text{display:block;}
+  .jurnalis-card .byline{font-size:12.5px; color:var(--green-deep); font-weight:600; margin-top:14px;}
+  .read-toggle{margin-top:14px; align-self:flex-start; background:transparent; border:1px solid var(--green-deep); color:var(--green-deep); border-radius:4px; padding:8px 14px; font-size:12.5px; font-weight:600;}
+  .read-toggle:hover{background:var(--green-deep); color:#fff;}
+
+  /* Info archive */
+  .info-list{display:flex; flex-direction:column; border:1px solid var(--line); border-radius:6px; overflow:hidden;}
+  .info-row{display:grid; grid-template-columns:100px 1fr 130px 90px; align-items:center; gap:16px; background:var(--cream); padding:18px 22px; border-bottom:1px solid var(--line);}
+  .info-row:last-child{border-bottom:none;}
+  .info-row:hover{background:var(--sage);}
+  .info-date{font-family:'JetBrains Mono', monospace; font-size:12px; color:#5a6960;}
+  .info-title{font-size:14.5px; font-weight:600; color:var(--green-black);}
+  .info-title span{display:block; font-size:12.5px; font-weight:400; color:#5a6960; margin-top:3px;}
+  .info-cat{font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.04em; padding:5px 10px; border-radius:3px; text-align:center;}
+  .cat-pengumuman{background:rgba(11,93,59,0.12); color:var(--green-deep);}
+  .cat-edaran{background:rgba(217,164,65,0.16); color:#8a6318;}
+  .cat-berita{background:rgba(180,72,47,0.1); color:var(--red-tag);}
+  .dl-btn{font-size:12.5px; font-weight:600; color:var(--green-deep); border:1px solid var(--green-deep); border-radius:4px; padding:7px 12px; background:transparent; text-align:center;}
+  .dl-btn:hover{background:var(--green-deep); color:#fff;}
+
+  /* Stats band */
+  .stats-band{background:linear-gradient(120deg, var(--green-black), var(--green-dark)); color:#fff; position:relative; overflow:hidden;}
+  .stats-sun{position:absolute; inset:0; opacity:0.08; color:var(--gold-light); pointer-events:none;}
+  .stats-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:8px; position:relative; z-index:2;}
+  .stat-item{text-align:center; padding:24px 12px; border-left:1px solid rgba(255,255,255,0.12);}
+  .stat-item:first-child{border-left:none;}
+  .stat-item b{font-family:'Fraunces', serif; font-size:40px; font-weight:600; color:var(--gold-light); display:block;}
+  .stat-item span{font-size:12.5px; color:rgba(255,255,255,0.72); display:block; margin-top:6px;}
+
+  /* Contact */
+  .contact{background:var(--cream);}
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:stretch;}
+  .contact-info{background:var(--green-deep); color:#fff; border-radius:6px; padding:40px; display:flex; flex-direction:column; justify-content:space-between; position:relative; overflow:hidden;}
+  .contact-info .deco{position:absolute; right:-30px; bottom:-30px; width:150px; height:150px; color:rgba(255,255,255,0.08);}
+  .contact-info h3{font-size:22px; margin-bottom:12px; position:relative; z-index:2;}
+  .contact-info p{font-size:14px; color:rgba(255,255,255,0.82); line-height:1.7; position:relative; z-index:2; margin-bottom:22px;}
+  .contact-detail{display:flex; gap:14px; margin-bottom:16px; position:relative; z-index:2;}
+  .contact-detail .icon{width:19px; height:19px; color:var(--gold-light); flex-shrink:0; margin-top:2px;}
+  .contact-detail span{font-size:13.5px; color:rgba(255,255,255,0.9); line-height:1.5;}
+  .contact-form{background:var(--sage); border-radius:6px; padding:40px; border:1px solid var(--line);}
+  .contact-form h3{font-size:20px; color:var(--green-black); margin-bottom:20px;}
+  .field{margin-bottom:16px;}
+  .field label{font-size:12.5px; font-weight:600; color:var(--green-black); display:block; margin-bottom:6px;}
+  .field input, .field textarea{width:100%; border:1px solid var(--line); border-radius:4px; padding:11px 13px; font-family:inherit; font-size:13.5px; background:#fff; color:var(--ink);}
+  .field input:focus, .field textarea:focus{outline:2px solid var(--green-deep); outline-offset:1px;}
+  .field textarea{resize:vertical; min-height:90px;}
+  .submit-btn{width:100%; background:var(--green-deep); color:#fff; border:none; padding:13px; border-radius:4px; font-weight:600; font-size:14px;}
+  .submit-btn:hover{background:var(--green-dark);}
+
+  footer{background:var(--green-black); color:rgba(255,255,255,0.7); padding:56px 0 26px;}
+  .footer-grid{display:grid; grid-template-columns:1.3fr 1fr 1fr 1fr; gap:40px; padding-bottom:38px; border-bottom:1px solid rgba(255,255,255,0.1);}
+  .footer-brand{display:flex; gap:12px; align-items:flex-start; margin-bottom:14px;}
+  .footer-brand .emblem{width:36px; height:36px; color:var(--gold-light); flex-shrink:0;}
+  .footer-brand .school-name{font-family:'Fraunces',serif; color:#fff; font-size:14.5px; font-weight:600;}
+  .footer-brand .school-sub{font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:0.05em;}
+  .footer p.desc{font-size:13px; line-height:1.7; max-width:270px;}
+  .footer h5{font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#fff; margin-bottom:16px;}
+  .footer ul li{margin-bottom:10px; font-size:13px;}
+  .footer ul li a:hover{color:var(--gold-light);}
+  .footer-bottom{display:flex; justify-content:space-between; padding-top:22px; font-size:12px;}
+
+  .wa-float{position:fixed; bottom:26px; right:26px; z-index:80; background:#25D366; color:#fff; padding:14px 22px; border-radius:30px; display:flex; align-items:center; gap:10px; font-weight:600; font-size:14px; box-shadow:0 10px 26px rgba(0,0,0,0.22);}
+
+  @media (max-width: 980px){
+    nav.menu{display:none;}
+    .about-grid, .contact-grid{grid-template-columns:1fr;}
+    .prestasi-grid, .jurnalis-grid{grid-template-columns:repeat(2,1fr);}
+    .stats-grid{grid-template-columns:repeat(2,1fr);}
+    .stat-item:nth-child(3){border-left:none;}
+    .hero .wrap{grid-template-columns:1fr;}
+    .hero h1{font-size:36px;}
+    .info-row{grid-template-columns:1fr; text-align:left; gap:8px;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:560px){
+    .wrap{padding:0 20px;}
+    .topbar .wrap, .nav .wrap{padding-left:20px; padding-right:20px;}
+    .prestasi-grid, .jurnalis-grid{grid-template-columns:1fr;}
+    .stats-grid{grid-template-columns:1fr 1fr;}
+    .footer-grid{grid-template-columns:1fr;}
+    .hero h1{font-size:28px;}
+    section{padding:56px 0;}
+    .archive-toolbar{flex-direction:column; align-items:stretch;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="phone">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1v3.5c0 .6-.4 1-1 1C10.6 21.4 2.6 13.4 2.6 3.9c0-.6.4-1 1-1H7c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8z" fill="currentColor"/></svg>
+      <span>(022) 420-1234</span>
+    </div>
+    <div class="socials">
+      <a href="#" aria-label="Facebook"><svg width="13" height="13" viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.25-1.5 1.55-1.5H17V3.7C16.6 3.6 15.5 3.5 14.3 3.5c-2.5 0-4.2 1.5-4.2 4.3v2.1H7.4V13h2.7v8h3.4z" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="YouTube"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M22 8.2s-.2-1.5-.8-2.2c-.8-.8-1.7-.8-2.1-.9C16.3 5 12 5 12 5s-4.3 0-7.1.1c-.4 0-1.3.1-2.1.9C2.2 6.7 2 8.2 2 8.2S1.8 10 1.8 11.7v.6c0 1.7.2 3.5.2 3.5s.2 1.5.8 2.2c.8.8 1.9.8 2.4.9 1.7.2 7.3.2 7.3.2s4.3 0 7.1-.1c.4 0 1.3-.1 2.1-.9.6-.7.8-2.2.8-2.2s.2-1.7.2-3.5v-.6c0-1.7-.2-3.5-.2-3.5zM9.9 15V8.9l5.4 3-5.4 3.1z" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg width="13" height="13" viewBox="0 0 24 24"><path d="M12 2.2c2.7 0 3 0 4.1.06 1.1.05 1.8.22 2.2.37.6.23 1 .5 1.4.9.4.4.7.8.9 1.4.15.4.32 1.1.37 2.2.06 1.1.06 1.4.06 4.1s0 3-.06 4.1c-.05 1.1-.22 1.8-.37 2.2-.23.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.15-1.1.32-2.2.37-1.1.06-1.4.06-4.1.06s-3 0-4.1-.06c-1.1-.05-1.8-.22-2.2-.37-.6-.23-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.15-.4-.32-1.1-.37-2.2C2.2 15 2.2 14.7 2.2 12s0-3 .06-4.1c.05-1.1.22-1.8.37-2.2.23-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.15 1.1-.32 2.2-.37C9 2.2 9.3 2.2 12 2.2zm0 1.8c-2.65 0-2.97 0-4 .06-.97.04-1.5.2-1.85.34-.47.18-.8.4-1.15.75-.35.35-.57.68-.75 1.15-.14.35-.3.88-.34 1.85-.06 1.03-.06 1.35-.06 4s0 2.97.06 4c.04.97.2 1.5.34 1.85.18.47.4.8.75 1.15.35.35.68.57 1.15.75.35.14.88.3 1.85.34 1.03.06 1.35.06 4 .06s2.97 0 4-.06c.97-.04 1.5-.2 1.85-.34.47-.18.8-.4 1.15-.75.35-.35.57-.68.75-1.15.14-.35.3-.88.34-1.85.06-1.03.06-1.35.06-4s0-2.97-.06-4c-.04-.97-.2-1.5-.34-1.85-.18-.47-.4-.8-.75-1.15-.35-.35-.68-.57-1.15-.75-.35-.14-.88-.3-1.85-.34-1.03-.06-1.35-.06-4-.06zm0 4.85a5.15 5.15 0 1 1 0 10.3 5.15 5.15 0 0 1 0-10.3zm0 1.8a3.35 3.35 0 1 0 0 6.7 3.35 3.35 0 0 0 0-6.7zm5.35-2a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z" fill="currentColor"/></svg></a>
+    </div>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <div class="brand">
+      <svg class="emblem" viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="50" r="8" fill="currentColor"/>
+        <g stroke="currentColor" stroke-width="4" stroke-linecap="round">
+          <path d="M50 18 V30 M50 70 V82 M18 50 H30 M70 50 H82 M27 27 L35.5 35.5 M64.5 64.5 L73 73 M73 27 L64.5 35.5 M35.5 64.5 L27 73"/>
+        </g>
+        <circle cx="50" cy="50" r="44" stroke="currentColor" stroke-width="2" fill="none" opacity="0.35"/>
+      </svg>
+      <div class="names">
+        <div class="school-name">SD MUHAMMADIYAH 1 BANDUNG</div>
+        <div class="school-sub">ARSIP PRESTASI &amp; INFORMASI SEKOLAH</div>
+      </div>
+    </div>
+    <nav class="menu">
+      <ul>
+        <li><a class="top-link active" href="#home">Home</a></li>
+        <li><a class="top-link" href="#tentang">Tentang Kami</a></li>
+        <li><a class="top-link" href="#prestasi">Arsip Prestasi</a></li>
+        <li><a class="top-link" href="#jurnalis">Jurnalis Cilik</a></li>
+        <li><a class="top-link" href="#informasi">Arsip Informasi</a></li>
+        <li><a class="top-link" href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="home" style="padding:0;">
+  <div class="hero-sun">
+    <svg width="380" height="380" style="top:-120px; left:-100px;" viewBox="0 0 100 100"><circle cx="50" cy="50" r="10" fill="currentColor"/><g stroke="currentColor" stroke-width="5" stroke-linecap="round"><path d="M50 8 V26 M50 74 V92 M8 50 H26 M74 50 H92 M20 20 L33 33 M67 67 L80 80 M80 20 L67 33 M33 67 L20 80"/></g></svg>
+    <svg width="220" height="220" style="bottom:-70px; right:60px;" viewBox="0 0 100 100"><circle cx="50" cy="50" r="10" fill="currentColor"/><g stroke="currentColor" stroke-width="5" stroke-linecap="round"><path d="M50 8 V26 M50 74 V92 M8 50 H26 M74 50 H92 M20 20 L33 33 M67 67 L80 80 M80 20 L67 33 M33 67 L20 80"/></g></svg>
+  </div>
+  <div class="wrap">
+    <div>
+      <div class="hero-eyebrow"><span class="rule"></span><span class="eyebrow">MUHAMMADIYAH 1 BANDUNG</span></div>
+      <h1>Arsip Prestasi &amp;<br><span class="italic">Informasi Sekolah</span></h1>
+      <p class="lede">Satu tempat untuk menyimpan dan menelusuri seluruh capaian siswa, pengumuman, dokumen resmi, hingga karya tulis eskul Jurnalis Cilik SD Muhammadiyah 1 Bandung — tersusun rapi, mudah dicari.</p>
+      <div class="cta-row">
+        <a href="#prestasi" class="btn btn-gold">Telusuri Arsip Prestasi</a>
+        <a href="#jurnalis" class="btn btn-outline">Baca Karya Jurnalis Cilik</a>
+      </div>
+    </div>
+    <div class="hero-stat-panel">
+      <div class="row"><span>Total Prestasi Tercatat</span><b>12</b></div>
+      <div class="row"><span>Karya Jurnalis Cilik</span><b>6</b></div>
+      <div class="row"><span>Dokumen &amp; Pengumuman</span><b>6</b></div>
+      <div class="row"><span>Tahun Ajaran Terekam</span><b>2022–2026</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="tentang">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-visual">
+        <svg class="center-sun" viewBox="0 0 100 100"><circle cx="50" cy="50" r="10" fill="currentColor"/><g stroke="currentColor" stroke-width="5" stroke-linecap="round"><path d="M50 8 V26 M50 74 V92 M8 50 H26 M74 50 H92 M20 20 L33 33 M67 67 L80 80 M80 20 L67 33 M33 67 L20 80"/></g></svg>
+      </div>
+      <div>
+        <div class="section-head" style="margin-bottom:0;">
+          <div class="eyebrow"><span class="rule"></span>TENTANG ARSIP INI</div>
+          <h2>Mengapa sekolah <span class="italic">perlu mengarsipkan</span> setiap capaian</h2>
+          <p>Halaman ini dibuat agar seluruh prestasi siswa, guru, dan sekolah — dari tingkat kota hingga nasional — tercatat rapi dan mudah ditelusuri kembali oleh guru, orang tua, maupun siswa. Arsip informasi juga menyimpan pengumuman dan surat edaran resmi sekolah.</p>
+        </div>
+        <div class="about-list">
+          <div class="about-item">
+            <svg class="sun-mark" viewBox="0 0 100 100"><circle cx="50" cy="50" r="10" fill="currentColor"/><g stroke="currentColor" stroke-width="7" stroke-linecap="round"><path d="M50 8 V26 M50 74 V92 M8 50 H26 M74 50 H92 M20 20 L33 33 M67 67 L80 80 M80 20 L67 33 M33 67 L20 80"/></g></svg>
+            <div><h4>Terpusat</h4><p>Semua data prestasi dan dokumen sekolah tersimpan di satu tempat, tidak tercecer di banyak folder.</p></div>
+          </div>
+          <div class="about-item">
+            <svg class="sun-mark" viewBox="0 0 100 100"><circle cx="50" cy="50" r="10" fill="currentColor"/><g stroke="currentColor" stroke-width="7" stroke-linecap="round"><path d="M50 8 V26 M50 74 V92 M8 50 H26 M74 50 H92 M20 20 L33 33 M67 67 L80 80 M80 20 L67 33 M33 67 L20 80"/></g></svg>
+            <div><h4>Mudah Ditelusuri</h4><p>Filter berdasarkan kategori dan tingkat lomba, atau cari langsung berdasarkan nama siswa dan judul.</p></div>
+          </div>
+          <div class="about-item">
+            <svg class="sun-mark" viewBox="0 0 100 100"><circle cx="50" cy="50" r="10" fill="currentColor"/><g stroke="currentColor" stroke-width="7" stroke-linecap="round"><path d="M50 8 V26 M50 74 V92 M8 50 H26 M74 50 H92 M20 20 L33 33 M67 67 L80 80 M80 20 L67 33 M33 67 L20 80"/></g></svg>
+            <div><h4>Terus Diperbarui</h4><p>Setiap prestasi dan pengumuman baru ditambahkan ke arsip agar riwayat sekolah tetap lengkap.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARSIP PRESTASI -->
+<section class="archive" id="prestasi">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><span class="rule"></span>ARSIP PRESTASI</div>
+      <h2>Rekam jejak capaian siswa</h2>
+      <p>Cari berdasarkan nama, judul lomba, atau saring per kategori dan tingkat kejuaraan.</p>
+    </div>
+    <div class="archive-toolbar">
+      <div class="filter-group" id="filterKategori">
+        <button class="chip active" data-filter="semua">Semua</button>
+        <button class="chip" data-filter="Akademik">Akademik</button>
+        <button class="chip" data-filter="Keagamaan">Keagamaan</button>
+        <button class="chip" data-filter="Olahraga">Olahraga</button>
+        <button class="chip" data-filter="Seni">Seni &amp; Non-Akademik</button>
+      </div>
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <input type="text" id="searchPrestasi" placeholder="Cari nama siswa atau judul lomba...">
+      </div>
+    </div>
+    <div class="archive-meta" id="prestasiMeta">Menampilkan 12 dari 12 arsip prestasi</div>
+    <div class="prestasi-grid" id="prestasiGrid"></div>
+  </div>
+</section>
+
+<!-- JURNALIS CILIK -->
+<section class="jurnalis" id="jurnalis">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><span class="rule"></span>ESKUL BARU</div>
+      <h2>Karya Jurnalis Cilik</h2>
+      <p>Tulisan, liputan, dan wawancara hasil karya siswa eskul Jurnalis Cilik akan tersimpan dan bisa dibaca di sini.</p>
+    </div>
+    <div class="jurnalis-intro">
+      <svg class="sun-mark" viewBox="0 0 100 100"><circle cx="50" cy="50" r="10" fill="currentColor"/><g stroke="currentColor" stroke-width="7" stroke-linecap="round"><path d="M50 8 V26 M50 74 V92 M8 50 H26 M74 50 H92 M20 20 L33 33 M67 67 L80 80 M80 20 L67 33 M33 67 L20 80"/></g></svg>
+      <p>Eskul Jurnalis Cilik baru akan dimulai tahun ajaran ini. <strong>Contoh karya di bawah adalah ilustrasi format</strong> — begitu siswa mulai menulis, karya asli mereka tinggal ditambahkan ke arsip ini dengan format yang sama.</p>
+    </div>
+    <div class="jurnalis-grid" id="jurnalisGrid"></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-band">
+  <div class="stats-sun"><svg width="340" height="340" style="top:-90px; right:-90px;" viewBox="0 0 100 100"><circle cx="50" cy="50" r="10" fill="currentColor"/><g stroke="currentColor" stroke-width="5" stroke-linecap="round"><path d="M50 8 V26 M50 74 V92 M8 50 H26 M74 50 H92 M20 20 L33 33 M67 67 L80 80 M80 20 L67 33 M33 67 L20 80"/></g></svg></div>
+  <div class="wrap">
+    <div class="section-head on-dark">
+      <div class="eyebrow"><span class="rule"></span>REKAPITULASI</div>
+      <h2>Ringkasan arsip hingga hari ini</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-item"><b>12</b><span>Prestasi Tercatat</span></div>
+      <div class="stat-item"><b>6</b><span>Karya Jurnalis Cilik</span></div>
+      <div class="stat-item"><b>6</b><span>Dokumen &amp; Pengumuman</span></div>
+      <div class="stat-item"><b>4</b><span>Tahun Ajaran Terarsip</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ARSIP INFORMASI -->
+<section class="archive" id="informasi" style="background:var(--cream);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><span class="rule"></span>ARSIP INFORMASI</div>
+      <h2>Pengumuman, edaran, dan berita sekolah</h2>
+      <p>Dokumen resmi dan kabar terbaru dari SD Muhammadiyah 1 Bandung.</p>
+    </div>
+    <div class="info-list" id="infoList"></div>
+  </div>
+</section>
+
+<section class="contact" id="kontak">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><span class="rule"></span>KONTAK</div>
+      <h2>Ada dokumen atau prestasi yang ingin ditambahkan?</h2>
+      <p>Guru dan wali murid dapat menghubungi admin untuk memperbarui arsip sekolah.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <svg class="deco" viewBox="0 0 100 100"><circle cx="50" cy="50" r="10" fill="currentColor"/><g stroke="currentColor" stroke-width="5" stroke-linecap="round"><path d="M50 8 V26 M50 74 V92 M8 50 H26 M74 50 H92 M20 20 L33 33 M67 67 L80 80 M80 20 L67 33 M33 67 L20 80"/></g></svg>
+        <div>
+          <h3>SD Muhammadiyah 1 Bandung</h3>
+          <p>Pusat data prestasi dan informasi resmi sekolah, dikelola oleh tim admin dan tata usaha.</p>
+          <div class="contact-detail">
+            <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg>
+            <span>Jl. Pendidikan No. 1, Bandung, Jawa Barat</span>
+          </div>
+          <div class="contact-detail">
+            <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1v3.5c0 .6-.4 1-1 1C10.6 21.4 2.6 13.4 2.6 3.9c0-.6.4-1 1-1H7c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8z" stroke="currentColor" stroke-width="1.3"/></svg>
+            <span>(022) 420-1234</span>
+          </div>
+          <div class="contact-detail">
+            <svg class="icon" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="1.5" stroke="currentColor" stroke-width="1.6"/><path d="m4 6 8 7 8-7" stroke="currentColor" stroke-width="1.6"/></svg>
+            <span>arsip@sdmuh1bandung.sch.id</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Ajukan Penambahan Arsip</h3>
+        <form onsubmit="event.preventDefault(); alert('Terima kasih, permintaan Anda telah dikirim ke admin.');">
+          <div class="field"><label for="nm">Nama Pengaju</label><input id="nm" type="text" placeholder="Nama guru/wali murid" required></div>
+          <div class="field"><label for="jn">Jenis Data</label><input id="jn" type="text" placeholder="Prestasi / Pengumuman / Dokumen" required></div>
+          <div class="field"><label for="msg">Keterangan</label><textarea id="msg" placeholder="Jelaskan data yang ingin ditambahkan" required></textarea></div>
+          <button type="submit" class="submit-btn">Kirim Pengajuan</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg class="emblem" viewBox="0 0 100 100" fill="none">
+            <circle cx="50" cy="50" r="8" fill="currentColor"/>
+            <g stroke="currentColor" stroke-width="4" stroke-linecap="round"><path d="M50 18 V30 M50 70 V82 M18 50 H30 M70 50 H82 M27 27 L35.5 35.5 M64.5 64.5 L73 73 M73 27 L64.5 35.5 M35.5 64.5 L27 73"/></g>
+          </svg>
+          <div>
+            <div class="school-name">SD Muhammadiyah 1 Bandung</div>
+            <div class="school-sub">ARSIP PRESTASI &amp; INFORMASI</div>
+          </div>
+        </div>
+        <p class="desc">Menyimpan dan merawat riwayat capaian serta dokumen resmi sekolah agar mudah ditemukan kapan pun dibutuhkan.</p>
+      </div>
+      <div>
+        <h5>Navigasi</h5>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#tentang">Tentang Kami</a></li>
+          <li><a href="#prestasi">Arsip Prestasi</a></li>
+          <li><a href="#jurnalis">Jurnalis Cilik</a></li>
+          <li><a href="#informasi">Arsip Informasi</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Kategori Prestasi</h5>
+        <ul>
+          <li>Akademik</li>
+          <li>Keagamaan</li>
+          <li>Olahraga</li>
+          <li>Seni &amp; Non-Akademik</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Kontak</h5>
+        <ul>
+          <li>(022) 420-1234</li>
+          <li>arsip@sdmuh1bandung.sch.id</li>
+          <li>Bandung, Jawa Barat</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SD Muhammadiyah 1 Bandung.</span>
+      <span>Dibuat dengan Claude.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/62224201234" target="_blank" rel="noopener">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.02c-.24.68-1.4 1.3-1.93 1.38-.49.08-1.11.11-1.79-.11-.41-.13-.94-.3-1.62-.6-2.84-1.23-4.7-4.08-4.84-4.27-.14-.19-1.16-1.54-1.16-2.94s.74-2.09 1-2.38c.26-.28.57-.35.76-.35s.38 0 .55.01c.18.01.41-.07.64.49.24.58.81 2.01.88 2.16.07.15.12.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.61-.07.16-.19.7-.81.89-1.09.19-.28.38-.23.63-.14.26.09 1.63.77 1.91.91.28.14.47.21.54.33.07.12.07.68-.17 1.36z"/></svg>
+  <span>Hubungi Admin</span>
+</a>
+
+<script>
+  const prestasiData = [
+    {tahun:2026, kategori:"Akademik", tingkat:"nasional", judul:"Juara 1 Olimpiade Matematika Nasional (OMN) Tingkat SD", nama:"Ahmad Fauzan Ramadhan", kelas:"Kelas 6"},
+    {tahun:2026, kategori:"Keagamaan", tingkat:"kota", judul:"Juara 1 Musabaqah Tilawatil Qur'an (MTQ) Tingkat Kota Bandung", nama:"Salsabila Putri Anjani", kelas:"Kelas 5"},
+    {tahun:2025, kategori:"Olahraga", tingkat:"provinsi", judul:"Juara 2 Kejuaraan Renang Pelajar Jawa Barat", nama:"Muhammad Rafi Hidayat", kelas:"Kelas 6"},
+    {tahun:2025, kategori:"Seni", tingkat:"kota", judul:"Juara 1 Lomba Mewarnai Tingkat Kota Bandung", nama:"Nayla Zahra Khairunnisa", kelas:"Kelas 3"},
+    {tahun:2025, kategori:"Akademik", tingkat:"provinsi", judul:"Juara 3 Olimpiade Sains Nasional (OSN) Bidang IPA Tingkat Provinsi", nama:"Rizky Aditya Pratama", kelas:"Kelas 5"},
+    {tahun:2025, kategori:"Keagamaan", tingkat:"nasional", judul:"Juara Harapan 1 Lomba Hafidz Qur'an Juz 30 Tingkat Nasional", nama:"Aisyah Nur Fadhilah", kelas:"Kelas 6"},
+    {tahun:2024, kategori:"Olahraga", tingkat:"kota", judul:"Juara 1 Turnamen Bulu Tangkis Pelajar Kota Bandung", nama:"Bayu Setiawan", kelas:"Kelas 4"},
+    {tahun:2024, kategori:"Seni", tingkat:"provinsi", judul:"Juara 2 Festival Tari Tradisional Jawa Barat", nama:"Keisya Ramadhani &amp; Tim", kelas:"Kelas 5"},
+    {tahun:2024, kategori:"Akademik", tingkat:"kota", judul:"Juara 1 Cerdas Cermat Antar SD se-Kota Bandung", nama:"Tim Cerdas Cermat SD Muh 1", kelas:"Kelas 6"},
+    {tahun:2023, kategori:"Keagamaan", tingkat:"kota", judul:"Juara 2 Lomba Adzan dan Iqamah Tingkat Kota Bandung", nama:"Fajar Nugroho", kelas:"Kelas 4"},
+    {tahun:2023, kategori:"Olahraga", tingkat:"nasional", judul:"Juara 3 Kejuaraan Catur Pelajar Tingkat Nasional", nama:"Arka Wirayuda", kelas:"Kelas 6"},
+    {tahun:2022, kategori:"Seni", tingkat:"kota", judul:"Juara 1 Lomba Menyanyi Lagu Daerah Tingkat Kota Bandung", nama:"Citra Ayu Lestari", kelas:"Kelas 5"}
+  ];
+
+  const infoData = [
+    {tanggal:"05 Jul 2026", kategori:"Pengumuman", judul:"Pengumuman PPDB Tahun Ajaran 2026/2027", ket:"Jadwal dan syarat pendaftaran peserta didik baru."},
+    {tanggal:"28 Jun 2026", kategori:"Berita", judul:"SD Muhammadiyah 1 Bandung Raih Juara 1 OMN Nasional", ket:"Prestasi terbaru siswa kelas 6 di ajang olimpiade matematika."},
+    {tanggal:"15 Jun 2026", kategori:"Edaran", judul:"Edaran Libur Kenaikan Kelas dan Awal Tahun Ajaran Baru", ket:"Jadwal libur dan hari efektif belajar semester depan."},
+    {tanggal:"02 Jun 2026", kategori:"Pengumuman", judul:"Pengumuman Kelulusan dan Kenaikan Kelas", ket:"Hasil evaluasi belajar siswa tahun ajaran 2025/2026."},
+    {tanggal:"20 Mei 2026", kategori:"Berita", judul:"Kontingen Sekolah Ikuti MTQ Tingkat Kota Bandung", ket:"Dokumentasi keikutsertaan siswa dalam lomba keagamaan."},
+    {tanggal:"10 Mei 2026", kategori:"Edaran", judul:"Edaran Protokol Kesehatan dan Kegiatan Belajar", ket:"Panduan kegiatan sekolah untuk orang tua dan wali murid."}
+  ];
+
+  const jurnalisData = [
+    {tanggal:"03 Jul 2026", rubrik:"Liputan", judul:"Serunya Kegiatan Pesantren Kilat di Sekolah Kami", nama:"Difa Ayudia Nur R.", kelas:"Kelas 5", excerpt:"Bulan Ramadhan kemarin, sekolah kami mengadakan pesantren kilat selama tiga hari. Semua siswa ikut kegiatan tadarus, ceramah, dan buka puasa bersama.", full:"Bulan Ramadhan kemarin, sekolah kami mengadakan pesantren kilat selama tiga hari. Semua siswa ikut kegiatan tadarus, ceramah, dan buka puasa bersama. Kegiatan dimulai pukul delapan pagi dengan sholat dhuha berjamaah, dilanjutkan tadarus Al-Qur'an per kelas. Siang harinya ada ceramah dari ustadz tentang keutamaan bulan Ramadhan. Yang paling ditunggu adalah buka puasa bersama di halaman sekolah. Semua siswa terlihat senang dan kompak. Semoga kegiatan seperti ini bisa diadakan lagi tahun depan."},
+    {tanggal:"28 Jun 2026", rubrik:"Wawancara", judul:"Ngobrol Bareng Kak Fauzan, Juara 1 Olimpiade Matematika Nasional", nama:"Naura Khalisa Putri", kelas:"Kelas 6", excerpt:"Tim jurnalis cilik berkesempatan mewawancarai Ahmad Fauzan Ramadhan, siswa kelas 6 yang baru saja meraih juara 1 olimpiade matematika tingkat nasional.", full:"Tim jurnalis cilik berkesempatan mewawancarai Ahmad Fauzan Ramadhan, siswa kelas 6 yang baru saja meraih juara 1 olimpiade matematika tingkat nasional. Kak Fauzan bercerita, ia berlatih soal setiap hari selama satu jam setelah pulang sekolah. Menurutnya, kunci suksesnya adalah rajin bertanya kepada guru saat ada soal yang sulit. Ia berpesan kepada adik-adik kelas untuk tidak takut mencoba soal yang sulit, karena dari situlah kita belajar paling banyak. Kak Fauzan juga berterima kasih kepada guru pembimbing dan orang tuanya yang selalu mendukung."},
+    {tanggal:"20 Jun 2026", rubrik:"Opini", judul:"Pentingnya Membawa Bekal Sehat ke Sekolah", nama:"Kayla Ramadhani", kelas:"Kelas 4", excerpt:"Menurutku, membawa bekal dari rumah itu lebih sehat daripada jajan sembarangan. Selain hemat, kita juga tahu bahan makanan yang kita makan.", full:"Menurutku, membawa bekal dari rumah itu lebih sehat daripada jajan sembarangan. Selain hemat, kita juga tahu bahan makanan yang kita makan. Setiap pagi, ibuku selalu menyiapkan bekal seperti nasi, telur, dan buah-buahan. Kalau bekal habis, aku merasa lebih semangat belajar karena tidak lapar di kelas. Aku berharap teman-teman juga mulai membiasakan membawa bekal sehat dari rumah, supaya kita semua bisa belajar dengan badan yang kuat dan pikiran yang fokus."},
+    {tanggal:"12 Jun 2026", rubrik:"Liputan", judul:"Kunjungan ke Perpustakaan Kota Bandung", nama:"Zidan Alfarizi", kelas:"Kelas 5", excerpt:"Kelas 5 mengadakan kunjungan belajar ke Perpustakaan Kota Bandung. Kami belajar cara mencari buku dan mendengarkan dongeng dari kakak pustakawan.", full:"Kelas 5 mengadakan kunjungan belajar ke Perpustakaan Kota Bandung. Kami belajar cara mencari buku dan mendengarkan dongeng dari kakak pustakawan. Sesampainya di sana, kami dibagi menjadi beberapa kelompok kecil. Setiap kelompok diajak berkeliling melihat rak-rak buku dan diajarkan cara meminjam buku menggunakan kartu anggota. Bagian paling seru adalah sesi mendongeng di ruang anak-anak. Banyak dari kami yang jadi ingin lebih sering membaca buku setelah kunjungan ini."},
+    {tanggal:"05 Jun 2026", rubrik:"Wawancara", judul:"Cerita Bu Guru Rina Mengajar Selama 15 Tahun", nama:"Alika Zahra Ramadhani", kelas:"Kelas 6", excerpt:"Bu Rina sudah mengajar di sekolah kami selama 15 tahun. Tim jurnalis cilik menanyakan suka duka menjadi seorang guru sekolah dasar.", full:"Bu Rina sudah mengajar di sekolah kami selama 15 tahun. Tim jurnalis cilik menanyakan suka duka menjadi seorang guru sekolah dasar. Menurut Bu Rina, hal paling membahagiakan adalah melihat murid-muridnya tumbuh menjadi pribadi yang mandiri dan berprestasi. Tantangan terbesarnya adalah menyesuaikan cara mengajar untuk setiap anak yang berbeda-beda. Bu Rina berpesan agar siswa selalu rajin bertanya dan tidak malu ketika belum mengerti pelajaran, karena guru selalu siap membantu."},
+    {tanggal:"29 Mei 2026", rubrik:"Liputan", judul:"Serunya Class Meeting Akhir Semester", nama:"Rangga Saputra", kelas:"Kelas 4", excerpt:"Setelah ujian akhir semester selesai, sekolah mengadakan class meeting berupa lomba futsal, tarik tambang, dan cerdas cermat antar kelas.", full:"Setelah ujian akhir semester selesai, sekolah mengadakan class meeting berupa lomba futsal, tarik tambang, dan cerdas cermat antar kelas. Semua siswa terlihat sangat antusias mengikuti setiap perlombaan. Kelas 4B berhasil menjadi juara lomba tarik tambang setelah pertandingan yang sangat seru melawan kelas 4A. Acara ditutup dengan pembagian hadiah dan foto bersama seluruh siswa dan guru di lapangan sekolah."}
+  ];
+
+  function tingkatLabel(t){
+    return t === "nasional" ? "Nasional" : t === "provinsi" ? "Provinsi" : "Kota";
+  }
+
+  function renderPrestasi(filter, query){
+    const grid = document.getElementById('prestasiGrid');
+    const q = (query || "").toLowerCase().trim();
+    const filtered = prestasiData.filter(item => {
+      const matchKategori = filter === "semua" || item.kategori === filter;
+      const matchQuery = !q || item.judul.toLowerCase().includes(q) || item.nama.toLowerCase().includes(q);
+      return matchKategori && matchQuery;
+    }).sort((a,b) => b.tahun - a.tahun);
+
+    document.getElementById('prestasiMeta').textContent =
+      `Menampilkan ${filtered.length} dari ${prestasiData.length} arsip prestasi`;
+
+    if(filtered.length === 0){
+      grid.innerHTML = '<div class="empty-state">Tidak ada arsip yang cocok dengan pencarian atau filter ini.</div>';
+      return;
+    }
+
+    grid.innerHTML = filtered.map(item => `
+      <div class="prestasi-card">
+        <div class="prestasi-top">
+          <span class="tahun-badge">${item.tahun}</span>
+          <span class="tingkat-tag tingkat-${item.tingkat}">${tingkatLabel(item.tingkat)}</span>
+        </div>
+        <h4>${item.judul}</h4>
+        <div class="meta">
+          <span>${item.nama}</span>
+          <span>${item.kelas}</span>
+        </div>
+        <div class="kategori-tag">${item.kategori}</div>
+      </div>
+    `).join('');
+  }
+
+  function renderInfo(){
+    const list = document.getElementById('infoList');
+    list.innerHTML = infoData.map(item => {
+      const catClass = item.kategori === "Pengumuman" ? "cat-pengumuman" : item.kategori === "Edaran" ? "cat-edaran" : "cat-berita";
+      return `
+      <div class="info-row">
+        <div class="info-date">${item.tanggal}</div>
+        <div class="info-title">${item.judul}<span>${item.ket}</span></div>
+        <div class="info-cat ${catClass}">${item.kategori}</div>
+        <button class="dl-btn" onclick="alert('Dokumen ini akan tersedia untuk diunduh setelah diunggah oleh admin.')">Lihat</button>
+      </div>`;
+    }).join('');
+  }
+
+  function renderJurnalis(){
+    const grid = document.getElementById('jurnalisGrid');
+    grid.innerHTML = jurnalisData.map((item, i) => `
+      <div class="jurnalis-card" id="jcard-${i}">
+        <div class="jurnalis-top">
+          <span class="rubrik-tag">${item.rubrik}</span>
+          <span class="jurnalis-date">${item.tanggal}</span>
+        </div>
+        <h4>${item.judul}</h4>
+        <p class="excerpt">${item.excerpt}</p>
+        <p class="full-text">${item.full}</p>
+        <div class="byline">${item.nama} — ${item.kelas}</div>
+        <button class="read-toggle" onclick="toggleJurnalis(${i})">Baca Selengkapnya</button>
+      </div>
+    `).join('');
+  }
+
+  function toggleJurnalis(i){
+    const card = document.getElementById('jcard-' + i);
+    const btn = card.querySelector('.read-toggle');
+    card.classList.toggle('open');
+    btn.textContent = card.classList.contains('open') ? 'Tutup' : 'Baca Selengkapnya';
+  }
+
+  let activeFilter = "semua";
+  document.getElementById('filterKategori').addEventListener('click', (e) => {
+    if(e.target.classList.contains('chip')){
+      document.querySelectorAll('#filterKategori .chip').forEach(c => c.classList.remove('active'));
+      e.target.classList.add('active');
+      activeFilter = e.target.dataset.filter;
+      renderPrestasi(activeFilter, document.getElementById('searchPrestasi').value);
+    }
+  });
+  document.getElementById('searchPrestasi').addEventListener('input', (e) => {
+    renderPrestasi(activeFilter, e.target.value);
+  });
+
+  renderPrestasi("semua", "");
+  renderInfo();
+  renderJurnalis();
+</script>
+
+</body>
+</html>
